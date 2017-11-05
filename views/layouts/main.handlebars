@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lol Map Checker, Utility Application</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+	</head>
+	<body>
+		<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<li><a href="/about">About</a></li>
+        		<li><a href="/cv">CV</a></li>
+        		<li><a href="/blog">Blog</a></li>
+    		</ul>
+		</nav>
+		<div class="container">
+    		<div class="blurb">
+        		<h1>Hi there, Search summoners and find out their performances!</h1>
+				<p>This is a web app that will allows users to search themselves or other players.<em>League of Legends</em> Try Me Out!. <a href="/about">Find out more...</a></p>
+			<h1>Search Summoners Here! </h1>
+			<p> Enter summoner name</p>
+			YOUR RIOT DEV KEY
+			<br />
+			<input id="API-Key" />
+			<br />Summoner Name
+			<br />
+			<input id="userName" />
+
+			<input type="submit" onclick="summonerLookUp();" />
+			<br />
+			<br />Summoner Level: <span id="sLevel"></span>
+			<br />Summoner ID: <span id="sID"></span>
+			<br />Account ID: <span id="sAccID"></span>
+			<br />Profile Icon: <span id="proIcon"></span>
+		</div><!-- /.blurb -->
+		</div><!-- /.container -->
+		<footer>
+    		<ul>
+        		<li><a href="leagueoflegends.com">LoL.com</a></li>
+			</ul>
+		</footer>
+		<script
+  			src="https://code.jquery.com/jquery-3.2.1.min.js"
+  			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  			crossorigin="anonymous"></script>
+		<script src="sample.js"> </script>
+	</body>
+</html>
