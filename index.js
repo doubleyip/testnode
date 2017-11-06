@@ -7,7 +7,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 
 app.set('port',(process.env.PORT || 3000));
 app.set('view engine', 'handlebars');
-
+console.log('TEST');
 
 app.get('/', function(req, res) {
   var data = {};
