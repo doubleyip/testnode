@@ -10,8 +10,8 @@ app.set('view engine', 'handlebars');
 
 app.get('/', function(req, res) {
   var data = {};
-  var api_key = 'RGAPI-2f974520-a1fe-41e6-bb44-b749df094631';
-  var s_toSearch = 'dyrus';
+  var api_key = 'RGAPI-c16c2668-0913-4123-9416-113f700d30f0';
+  var s_toSearch = 'doubleyip';
   var URL = 'https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/' + s_toSearch + '?api_key=' + api_key;
   
   async.waterfall([
