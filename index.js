@@ -5,6 +5,7 @@ var request = require('request');
 var async = require('async');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 
+app.set('port',(process.env.PORT || 3000));
 app.set('view engine', 'handlebars');
 
 
@@ -40,5 +41,6 @@ app.get('/', function(req, res) {
   });
 });
 
-var port = Number(process.env.PORT || 3000);
-app.listen(port);
+app.listen(app.get('port'), function(){
+	console.log('Node app is running on port',app.get('port'));
+});
