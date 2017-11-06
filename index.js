@@ -6,6 +6,7 @@ var async = require('async');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 
 app.set('port',(process.env.PORT || 3000));
+app.set('views', __dirname + '/views');
 app.set('view engine', 'handlebars');
 console.log('TEST');
 
