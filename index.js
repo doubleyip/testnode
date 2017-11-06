@@ -36,7 +36,7 @@ app.get('/', function(req, res) {
       return;
     }
 
-    res.render('index', {
+    res.render('layouts/main', {
       info: data
     });
   });
