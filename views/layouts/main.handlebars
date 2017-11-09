@@ -1,11 +1,3 @@
-
-<form action="/search" method="get">
-	<input type="text" id="summoner" name="summoner" placeholder="Summoner Name">
-	<div>{{info.id}}</div>
-</form>
-
-
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -33,9 +25,11 @@
 			<input id="API-Key" />
 			<br />Summoner Name
 			<br />
-			<input id="userName" />
+			<form action="/search" method="get">
+				<input type="text" id="summoner" name="summoner" placeholder="Summoner Name">
+				<div>{{info.id}}</div>
+			</form>
 
-			<input type="submit" onclick="summonerLookUp();" />
 			<br />
 			<br />Summoner Level: <span id="sLevel"></span>
 			<br />Summoner ID: <span id="sID"></span>
