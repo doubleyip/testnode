@@ -8,11 +8,15 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 
-app.get('/', function(req, res) {
+app.get('/',function(req,res){
+	res.render('index');
+});
+
+app.get('/search', function(req, res) {
   var data = {};
   var api_key = 'RGAPI-c16c2668-0913-4123-9416-113f700d30f0';
-  var s_toSearch = 'doubleyip';
-  var URL = 'https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/' + s_toSearch + '?api_key=' + api_key;
+  var sumSearch = req.query.summoner.toLowerCase();
+  var URL = 'https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/' + sumSearch + '?api_key=' + api_key;
   
   async.waterfall([
     function(callback) {
