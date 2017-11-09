@@ -23,7 +23,7 @@ app.get('/search', function(req, res) {
       request(URL, function(err, response, body) {
         if(!err && response.statusCode == 200) {
           var json = JSON.parse(body);
-          data.id = json.id;
+          data.accountId = json.accountId;
           data.name = json.name;
           callback(null, data);
         } else {
