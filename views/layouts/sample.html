@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="map.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://rawgit.com/nnnick/Chart.js/v1.0.2/Chart.min.js"></script>
+
+</head>
+
+<body >
+	<title>Untitled</title>
+	<script  type="text/javascript">
+		function changeImg(imgNumber)	{
+			var myImages = ["Images/Background.jpg", 
+			"Images/Background1.jpg", 
+			"Images/Background2.jpg", 
+			"Images/Background3.jpg", 
+			"Images/Background4.jpg"]; 
+			var imgShown = document.body.style.backgroundImage;
+			var newImgNumber =Math.floor(Math.random()*myImages.length);
+			document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';
+		}
+		window.onload=changeImg;
+	</script>
+
+	<script>
+		window.addEventListener('load', 
+  		function() { 
+    		//alert('hello!');
+    		var x = processUser();
+    		printStuff(x);
+  		}, false);
+	</script>
+
+<!--
+<div class="toppanel">
+	<a href="error.html" > LoLMapChecker</a>
+</div>
+-->
+<div class = "topbar">
+<div class="leftbar"> 
+<a href= "index.html"> <img src="Images/icon1.png" alt="lol icon" width=25px height=25px>LoLMC </a>
+</div>
+
+<div class="titlepanel">
+	<form class="searchBox">
+	<select>
+		<option value="na" selected>NA</option>
+  		<option value="lan">LAN</option>
+  		<option value="eu">EU</option>
+  		<option value="kr">KR</option>
+	</select>
+	<input type="search" id="sbox1" name="search" placeholder="Search Summoner..">
+	<input type="submit" class="btn btn-info" value=".LOLMC">
+	</form>
+</div>
+</div>
+
+<div class="displayEverything">
+	<div class="summonerBox">
+		<br> <br> <br> <br>
+		<br> <br> <br> 
+		<br> <br> <br>
+		<br> <br> <br>
+		<div id= "sIcon"> 
+			<img src="Images/icon3.jpg" id= "tempIcon" alt= "icon" width="45px" height="45px">
+		</div>
+		<div id= "sName"> Billyeo </div>
+		<div id= "rankStat"> Challenger I </div>
+	</div>
+
+	<div class="summonerData">
+		<p> <span id="write" ></span></p>
+	</div>
+	
+</div>
+<canvas id="myChart1" height="300" width="500"></canvas>
+
+<div class="footer"> 
+		<ul class="footer_left">
+				<li class="footer_items">
+					<a href= "main.html">Home</a>
+				</li>
+				<li class="footer_items">
+					<a href= "main.html">About</a>
+				</li>
+				<li class="footer_items">
+					<a href= "main.html">Feedback</a>
+				</li>
+				<li class="footer_items">
+					<a href= "main.html">Contact Us</a>
+				</li>
+		</ul>
+
+		<ul class="footer_right">
+				<li class="footer_ss">
+					<a href="#" class="fa fa-facebook"> Facebook</a>
+				</li>
+				<li class="footer_ss">
+					<a href="#" class="fa fa-github"> Github</a>
+				</li>
+		</ul>
+</div>
+
+
+<!--<script> queryize(window.location.href)['search'] </script>-->
+
+<script type = "text/javascript">
+	var x  = processUser();
+	document.getElementById("sName").innerHTML = x;
+</script>
+
+<script
+  			src="https://code.jquery.com/jquery-3.2.1.min.js"
+  			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  			crossorigin="anonymous"></script>
+ <script src="tools.js">  </script>
+</script>
+ <div id="map"> </div>
+  		<!--<script type="text/javascript"> 
+  			queryize(window.location.href)['search'];
+  		</script> -->
+
+</body>
+</html>

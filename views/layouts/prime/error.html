@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	  <script src="map.js"></script>
+  	<script src="sample.js"></script>
+
+<style>
+	body {
+		background-image: url("LoL-Map-Checker.github.io/prime/Images/Error1.jpg");
+		background-repeat:  no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		position: fixed;
+		min-width: 100%;
+		min-height: 100%;
+	}
+</style>
+
+</head>
+
+<body>
+
+<div class = "topbar">
+<div class="leftbar"> 
+<a href= "main.html"> <img src="LoL-Map-Checker.github.io/prime/Images/icon1.png" alt="lol icon" width=20px height=20px>LoLMC </a>
+</div>
+
+
+<div class="titlepanel">
+	<form class="searchBox" action= "sample.html" method = "GET">
+	<select>
+		<option value="na" selected>NA</option>
+  		<option value="lan">LAN</option>
+  		<option value="eu">EU</option>
+  		<option value="kr">KR</option>
+	</select>
+	<input type="text" name="search" placeholder="Search Summoner..">
+	<input type="submit" class="btn btn-info" value=".LOLMC">
+	</form>
+</div>
+</div>
+
+<div class = "maintext">
+<h1 class="main"> Whoops something's not right. This summoner cannot be found 
+	<h2 class="main1"> Did you select the right server?</h2>
+	<h2 class="main1"> Make sure the summoner you are searching for is in the right region </h2>
+</h1>
+</div>
+
+<br>
+<div class = "heimerfact">
+<h1> Heimerfact </h1>
+<h3>  Did you know that Heimerdinger is the most intelligent yordle in Summoner's Rift? </h3>
+</div>
+<br>
+<div class="footer"> 
+		<ul class="footer_left">
+				<li class="footer_items">
+					<a href= "main.html">Home</a>
+				</li>
+				<li class="footer_items">
+					<a href= "main.html">About</a>
+				</li>
+				<li class="footer_items">
+					<a href= "main.html">Feedback</a>
+				</li>
+				<li class="footer_items">
+					<a href= "main.html">Contact Us</a>
+				</li>
+		</ul>
+
+		<ul class="footer_right">
+				<li class="footer_ss">
+					<a href="#" class="fa fa-facebook"> Facebook</a>
+				</li>
+				<li class="footer_ss">
+					<a href="#" class="fa fa-github"> Github</a>
+				</li>
+		</ul>
+</div>
+
+
+<!--
+<div class="buttons">
+    <a class="button" id="tweet-quote" title="Tweet this quote!" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+     <a class="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank">
+      <i class="fa fa-tumblr"></i>
+    </a>
+</div>
+-->
+<script>
+$(document).ready(function() {
+  getQuote();
+  $('#new-quote').on('click', getQuote);
+  $('#tweet-quote').on('click', function() {
+    if(!inIframe()) {
+      openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+    }
+  });
+  $('#tumblr-quote').on('click', function() {
+    if(!inIframe()) {
+      openURL('https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption='+encodeURIComponent(currentAuthor)+'&content=' + encodeURIComponent(currentQuote)+'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button');
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>

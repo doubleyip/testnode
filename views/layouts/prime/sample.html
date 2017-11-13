@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="map.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body >
+	<title>Untitled</title>
+	<script  type="text/javascript">
+		function changeImg(imgNumber)	{
+			var myImages = ["LoL-Map-Checker.github.io/prime/Images/Background.jpg", 
+					"LoL-Map-Checker.github.io/prime/Images/Background1.jpg", 
+					"LoL-Map-Checker.github.io/prime/Images/Background2.jpg", 
+					"LoL-Map-Checker.github.io/prime/Images/Background3.jpg", 
+					"LoL-Map-Checker.github.io/prime/Images/Background4.jpg"]; 
+			var imgShown = document.body.style.backgroundImage;
+			var newImgNumber =Math.floor(Math.random()*myImages.length);
+			document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';
+		}
+		window.onload=changeImg;
+	</script>
+
+	<script>
+		window.addEventListener('load', 
+  		function() { 
+    		//alert('hello!');
+    		var x = processUser();
+    		printStuff(x);
+  		}, false);
+	</script>
+
+<!--
+<div class="toppanel">
+	<a href="error.html" > LoLMapChecker</a>
+</div>
+-->
+<div class = "topbar">
+<div class="leftbar"> 
+<a href= "main.html"> <img src="LoL-Map-Checker.github.io/prime/Images/icon1.png" alt="lol icon" width=20px height=20px>LoLMC </a>
+</div>
+<!--
+<div class="topnav" id="myTopNav">
+	<a href="sample.html"> Home</a>
+	<a href="about"> About</a>
+	<a href="contactus"> Contact Us</a>
+	<a href="feedback"> Feedback</a>
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+-->
+
+<div class="titlepanel">
+	<form class="searchBox">
+	<select>
+		<option value="na" selected>NA</option>
+  		<option value="lan">LAN</option>
+  		<option value="eu">EU</option>
+  		<option value="kr">KR</option>
+	</select>
+	<input type="search" name="search" placeholder="Search Summoner..">
+	<input type="submit" class="btn btn-info" value=".LOLMC">
+	</form>
+</div>
+</div>
+
+<div class="summonerNameInfo">
+
+<h1 float:left> SUMMONER INFO HERE <h1>
+
+</div>
+
+<div class="footer"> 
+		<ul class="footer_left">
+				<li class="footer_items">
+					<a href= "main.html">Home</a>
+				</li>
+				<li class="footer_items">
+					<a href= "main.html">About</a>
+				</li>
+				<li class="footer_items">
+					<a href= "main.html">Feedback</a>
+				</li>
+				<li class="footer_items">
+					<a href= "main.html">Contact Us</a>
+				</li>
+		</ul>
+
+		<ul class="footer_right">
+				<li class="footer_ss">
+					<a href="#" class="fa fa-facebook"> Facebook</a>
+				</li>
+				<li class="footer_ss">
+					<a href="#" class="fa fa-github"> Github</a>
+				</li>
+		</ul>
+</div>
+
+
+<h2>Received: </h2>
+<p><b>name: </b> <span id="write" ></span></p>
+
+
+<!--<script> queryize(window.location.href)['search'] </script>-->
+
+<script>
+  //var x = processUser();
+  //summonerLookUp(x);
+  //printStuff(x);
+  //matchLookUp();
+ 	function searchUser(){
+ 		var x = processUser();
+ 		printStuff(x);
+ 	}
+
+</script>
+
+<script
+  			src="https://code.jquery.com/jquery-3.2.1.min.js"
+  			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  			crossorigin="anonymous"></script>
+ <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  		<!--<script type="text/javascript"> 
+  			queryize(window.location.href)['search'];
+  		</script> -->
+
+</body>
+</html>

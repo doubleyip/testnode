@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<style>
+	body { 
+		background-color: #99ccff;
+	}
+
+	 .topbar {
+	 	height: 40px;
+	 	font-family: 'Roboto', sans-serif;
+	 	padding: 10px 15px;
+	 	font-weight: bold;
+	 	background-color: #66aeff;
+	 	/*background-color: #bfbfbf;*/
+	 }
+
+	 .topbar a:hover {
+	 	color: green;
+	 }
+
+	 .topbar a:visited {
+	 	color: #ffffff;
+	 }
+	 /*Search box*/
+
+	 #wrapper {
+	 	/*background-image: url('icon2.jpg');*/
+	 	background-repeat: no-repeat;
+	 	background-size: contain;
+	 	position: relative;
+	 	width: 600px;
+	 	left: 50%;
+	 	margin-left: -305px;
+	 	/*padding: 5px;*/
+	 	padding: 0 0 5px 5px;
+	 	object-fit: contain;
+	 } 
+
+	 #titlebox {
+	 	font-size: 75px;
+	 	font-family: verdana, sans-serif;
+	 	text-align: center;
+	 	text-transform: uppercase;
+	 	color: #ffffff;
+	 	border-style: groove;
+	 	/*background-image: url('icon2.jpg')*/
+	 }
+
+	.searchBox {
+		width: 650px;
+		color: black;
+		padding: 16px 4px;
+		background-color: rgba(255,255,255,0.4);
+		border: 2px solid #ccc;
+		/*margin-left: 12cm;*/
+		margin:auto;
+		text-align: center;
+	}
+
+	#selectBox{
+		color: rgba(25,0,10,0.7);
+		background-color: grey;
+		height: 40px;
+		text-align: center;	
+		font-size: 10px;
+	}
+
+	/*#searchBox input[type=text] */ #input{
+		width: 400px;
+		height: 40px;
+		padding-right: 50px;
+		box-sizing: border-box;
+		border: 2px solid #ccc;
+		border-radius: 2px;
+		font-size: 14px;
+		background-color: white;
+		background-position: 10px 10px;
+		background-repeat: no-repeat;
+		padding: 12px 30px;
+		margin: auto;
+	/*-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;*/
+	}
+
+	/*#searchBox input[type=submit] */ #inputgo{
+		font-size: 14px;
+		text-align: right;
+		box-sizing: border-box;
+		border: 1px solid black;
+		padding: 3px 8px;
+		border-radius: 2px;
+		background-repeat: no-repeat;
+		margin: auto;
+	}
+
+	.footer {
+   	 	position: fixed;
+    	left: 0;
+    	bottom: 0;
+    	width: 100%;
+    	color: white;
+    	text-align: center;
+
+	}
+
+	.footer .footer_left{
+		/*display: inline-block;
+		vertical-align: middle;
+		text-align: center;*/
+		list-style-type: none;
+    	margin: 0;
+    	padding: 0;
+    	overflow: hidden;
+    	background-color: #ffffff;
+
+	}
+
+	.footer .footer_left .footer_items {
+		float: center;
+		display: inline;
+		padding: 5px;
+		font-size: 15px;
+	}
+
+	.footer .footer_left .footer_items a:hover{
+		background-color: #ffffff;
+	}
+
+	.footer .footer_right{
+		/*display: inline-block;
+		vertical-align: middle;
+		text-align: center;*/
+		list-style-type: none;
+    	margin: 0;
+    	padding: 0;
+    	overflow: hidden;
+    	background-color: #ffffff;
+
+	}
+
+	.footer .footer_right .footer_ss {
+		float: center;
+		display: inline;
+		padding: 5px;
+		font-size: 15px;
+		padding: 20px;
+	}
+
+
+</style>
+</head>
+
+<body>
+	<div class="topbar"> 
+	<a href= "sample.html"> <img src="LoL-Map-Checker.github.io/prime/Images/icon1.png" alt="lol icon" width=20px height=20px>LoLMC </a>
+	</div>
+
+	<div id="wrapper"> 
+		<div id="titlebox"> <i>League of Legends Map Checker</i>
+			
+		</div>
+	</div>
+
+	<form class="searchBox" action= "sample.html" method = "GET">
+			<select id="selectbox">
+					<option value="na" selected>NA</option>
+  					<option value="lan">LAN</option>
+  					<option value="eu">EU</option>
+  					<option value="kr">KR</option>
+			</select>
+			<!--placeholder="Search Summoner.."
+			onclick = "printStuff(); return false;"-->
+			<input id="input" type="text" name="search" >
+			<input id="inputgo" type="submit" class="btn btn-info" value=".LOLMC">
+	</form>
+
+	<div class="footer"> 
+			<ul class="footer_left">
+				<li class="footer_items">
+					<a href= "main.html">Home</a>
+				</li>
+				<li class="footer_items">
+					<a href= "main.html">About</a>
+				</li>
+				<li class="footer_items">
+					<a href= "main.html">Feedback</a>
+				</li>
+				<li class="footer_items">
+					<a href= "main.html">Contact Us</a>
+				</li>
+			</ul>
+
+			<ul class="footer_right">
+				<li class="footer_ss">
+					<a href="#" class="fa fa-facebook"> Facebook</a>
+				</li>
+				<li class="footer_ss">
+					<a href="#" class="fa fa-github"> Github</a>
+				</li>
+			</ul>
+	</div>
+
+<script src="map.js"> <meta charset="utf-8"> </script>
+<script
+  			src="https://code.jquery.com/jquery-3.2.1.min.js"
+  			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  			crossorigin="anonymous"></script>
+  		
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+</body>
+
+</html>
