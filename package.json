@@ -20,8 +20,10 @@
     "async": "^2.6.0",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
+    "express-router": "0.0.1",
     "nodemon": "^1.12.1",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "router-express": "^1.5.2"
   },
   "devDependencies": {}
 }

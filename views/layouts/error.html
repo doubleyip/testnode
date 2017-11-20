@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/error.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	  <script src="jsfiles/map.js"></script>
+  	<script src="jsfiles/sample.js"></script>
+
+<style>
+		/*background-image: url("Images/Error1.jpg");
+		background-repeat:  no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		position: fixed;
+		min-width: 100%;
+		min-height: 100%;*/
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar nav1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand titleBrand" href="index.html"> 
+      	<span><img src="Images/icon1.png" alt="lol icon" width=30px height=30px></span>
+      	<b>LOL<span id="title1">MAPCHECKER</span></b>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class= "container">
+	<div class = "maintext">
+		<h1 class="main1" id="specialText"> Whoops something's not right.</h1>
+			<h2 class="main1"> This summoner cannot be <span id="specialText">found</span> </h2>
+			<h2 class="main1"> Did you select the <span id="specialText">right server?</span></h2>
+			<h2 class="main1"> Make sure the summoner you are searching is in the</h2>
+			<h2 class="main1"><span id="specialText">correct region </span></h2>
+		</h1>
+	</div>
+</div>
+
+<div class="container">
+	<form class="searchBox" action= "search.html" method = "GET">
+		<div class="input-group input-group-lg">
+			<div class="input-group-btn selectRegion">
+        		<button type="button" href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="selection">Region</span> <span class="caret"></span></button>
+        		<ul class="dropdown-menu">
+          			<li><a href="#">NA</a></li>
+         			<li><a href="#">KR</a></li>
+          			<li><a href="#">EU</a></li>
+          			<li role="separator" class="divider"></li>
+          			<li><a href="#">Unknown Region</a></li>
+        		</ul>
+        	</div>
+
+			<input type="text" class="form-control" name="search" placeholder="Search Summoner...">
+			<div class="input-group-btn"> <input type="submit" class="btn btn-info" value=".LOLMC"> </div>
+		</div>
+	</form>
+</div>
+
+<br> <br> <br>
+<div class="container myContainer">
+	<div class="col-sm-6 well factContainer">
+	<div class = "heimerfact">
+		<h1> Bored? </h1>
+		<h3> Get Your Heimerfact </h3>
+		<br>
+			<h3>
+			<div id="quoteFact" onload="newFact()"> </div>
+			<button type="button" class="btn btn-info" onclick="newFact()">New Fact</button>
+			</h3>
+
+	</div>
+	</div>
+</div>
+
+<br> <br> <br> <br>
+
+<footer>
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="footer-body">
+                <ul class="nav navbar-nav">
+                    <li><a href="other.html#aboutus">About Us</a></li>
+                    <li><a href="other.html#userreview">User Review</a></li>
+                    <li><a href="other.html#termsandconditions">Terms &amp; Conditions</a></li>
+                    <li><a href="other.html#privacypolicy">Privacy Policy</a></li>
+                    <li><a href="other.html#userpolicy">User Policy</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                	<li><a href="#" class="fa fa-facebook"></a></li>
+                	<li><a href="#" class="fa fa-twitter"></a></li>
+                	<li><a href="#" class="fa fa-github"></a></li>
+                </ul>
+            </div>
+
+          	<div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#footer-body">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="jsfiles/index.js"></script>
+</body>
+</html>

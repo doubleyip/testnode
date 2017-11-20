@@ -1,0 +1,144 @@
+<!doctype html>
+<html >
+<head>
+	<link rel="stylesheet" type="text/css" href= "css/index.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+
+<div id="top1">
+<nav class="navbar nav1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand titleBrand" href="index.html"> 
+      	<span><img src="Images/icon1.png" alt="lol icon" width=30px height=30px></span>
+      	<b>LOL<span id="title1">MAPCHECKER</span></b>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br> <br> <br> <br>
+
+<div class="container mainText">
+	<h1 id="webName"> <b>LOL Map Checker</b></h1> 
+	<h2 id="webDescription"> <b class="Special">Searching</b> and <b class="Special"> Analyzing </b> your matches made easy </h2>
+</div>
+
+<br> <br> <br>
+
+<div class="container">
+	<form class="searchBox" action= "search.html" method = "GET">
+		<div class="input-group input-group-lg">
+			<!--<select class="selectpicker" data-live-search="true">
+					<option value="na" selected>NA</option>
+  					<option value="lan">LAN</option>
+  					<option value="eu">EU</option>
+  					<option value="kr">KR</option>
+			</select>-->
+			<div class="input-group-btn selectRegion">
+        		<button type="button" href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="selection">Region</span> <span class="caret"></span></button>
+        		<ul class="dropdown-menu">
+          			<li><a href="#">NA</a></li>
+         			<li><a href="#">KR</a></li>
+          			<li><a href="#">EU</a></li>
+          			<li role="separator" class="divider"></li>
+          			<li><a href="#">Unknown Region</a></li>
+        		</ul>
+        	</div>
+
+			<input type="text" class="form-control" name="search" placeholder="Search Summoner...">
+			<div class="input-group-btn"> <input type="submit" class="btn btn-info" value=".LOLMC"> </div>
+		</div>
+	</form>
+</div>
+
+<br> <br> <br> <br> <br> <br> <br> <br>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 well">
+        	<div class="myIcons">
+        		<span class="fa fa-eye fa-5x"></span>
+            	<h1>Take a Heuristic Approach</h1>
+            	<p> Analyze and take apart the game. See the bigger picture behind <b>how</b> and <b>why</b> you move. </p>
+            </div>
+        </div>
+        <div class="col-sm-4 well">
+        	<div class="myIcons" >
+        		<span class="fa fa-braille fa-5x"></span>
+            	<h1>Identify Playstyles</h1>
+            	<p> Everyone has their own <b>unique</b> playstyle. Discover <b>yours</b> and <b>shape</b> yourself to hone your style. </p>
+            </div>
+        </div>
+        <div class="col-sm-4 well">
+        	<div class="myIcons">
+        		<span class="fa fa-line-chart fa-5x"></span>
+        		<h1>Improve Yourself**</h1>
+        		<p> League of Legends is a game. Like <i>any</i> game, the player defines the outcome. Will you
+        		<b>Ryze over the Rest?</b>.</p>
+        	</div>
+        </div>
+    </div>
+</div>
+<br> <br> <br> <br> 
+<footer>
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="footer-body">
+                <ul class="nav navbar-nav">
+                    <li><a href="other.html#aboutus">About Us</a></li>
+                    <li><a href="other.html#userreview">User Review</a></li>
+                    <li><a href="other.html#termsandconditions">Terms &amp; Conditions</a></li>
+                    <li><a href="other.html#privacypolicy">Privacy Policy</a></li>
+                    <li><a href="other.html#userpolicy">User Policy</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                	<li><a href="#" class="fa fa-facebook"></a></li>
+                	<li><a href="#" class="fa fa-twitter"></a></li>
+                	<li><a href="#" class="fa fa-github"></a></li>
+                </ul>
+            </div>
+
+          	<div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#footer-body">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="jsfiles/index.js"> <meta charset="utf-8"> </script>
+<script
+  	src="https://code.jquery.com/jquery-3.2.1.min.js"
+  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  	crossorigin="anonymous"></script>
+  		
+<script src="jsfiles/tools.js"></script>
+</body>
+
+</html>

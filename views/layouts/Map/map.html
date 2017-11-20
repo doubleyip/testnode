@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lol Map Checker, Utility Application</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+	</head>
+	<body>
+		<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<li><a href="/about">About</a></li>
+        		<li><a href="/cv">CV</a></li>
+        		<li><a href="/blog">Blog</a></li>
+    		</ul>
+		</nav>
+		<div class="container">
+    		<div class="blurb">
+        		<h1>This is the testing page for the heatmap</h1>
+				<p>This probably doesn't work <a href="/404">Complain to us</a></p>
+			<p> Enter summoner name</p>
+			YOUR RIOT DEV KEY
+			<br />
+			<input id="API-Key" />
+			<br />Summoner Name
+			<br />
+			<input id="userName" />
+
+			<input type="submit" onclick="printStuff();" />
+			<br />
+		</div><!-- /.container -->
+		<script
+  			src="https://code.jquery.com/jquery-3.2.1.min.js"
+  			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  			crossorigin="anonymous"></script>
+  			<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <!--<script src="d3.min.js"></script>-->
+		<script src="map.js"> <meta charset="utf-8"> </script>
+		<div id="map">
+		</div>
+	</body>
+</html>
