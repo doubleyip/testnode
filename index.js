@@ -3,56 +3,34 @@ var app = express();
 var exphbs = require('express-handlebars');
 var request = require('request');
 var async = require('async');
-var path=require("path");
-app.engine('handlebars', exphbs({defaultLayout: 'index'}));
-var tools=require('./map');
-tools.test();
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 
 app.set('view engine', 'handlebars');
 
 
-app.get('/',function(req,res){
-	res.render('index');
-});
-
-app.use(express.static(__dirname+'/'));
-app.use(express.static(path.resolve(__dirname,'/')));
-app.get('/search',function(req,res){
-	res.sendFile(__dirname+'/views/layouts/search.html');
-	var tools=require('./map');
-});
-
-app.get('/searchSum', function(req, res) {
+app.get('/sumSearch', function(req, res) {
   var data = {};
   var server = 'na';
   var apiKey = 'RGAPI-c16c2668-0913-4123-9416-113f700d30f0';
-  var sumSearch = req.query.summoner.toLowerCase();
+  var sumSearch = req.query.name;
   var URL = 'https://'+server+'1.api.riotgames.com/lol/summoner/v3/summoners/by-name/' + sumSearch + '?api_key=' + apiKey;
   console.log(URL);
+
   async.waterfall([
     function(callback) {
       request(URL, function(err, response, body) {
         if(!err && response.statusCode == 200) {
           var json = JSON.parse(body);
-          data.accountId = json.accountId;
+          data.id = json.id;
           data.name = json.name;
           callback(null, data);
-		  console.log(json.accountId);
+		  console.log(data.name);
+		  console.log(data.id);
         } else {
           console.log(err);
         }
       });
-    },
-	function(data, callback){
-		var URL='https://na1.api.riotgames.com/lol/match/v3/matchlists/by-account/'+data.id+'/recent?api_key='+apiKey;
-		request(URL,function(err,response,body){
-			if(!err&&response.statuscode==200){
-				
-			}else{
-				console.log('Line 39');
-			}
-		});
-	}
+    }
   ],
   function(err, data) {
     if(err) {
@@ -60,9 +38,11 @@ app.get('/searchSum', function(req, res) {
       return;
     }
 
-    res.render('index', {
-      info: data
-    });
+    /*res.render('index', {
+      info: json
+	  
+    })*/
+	res.status(404).json(data);
   });
 });
 
